@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/Login.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/product.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/Product-detail.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/ShowProduct.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/TrangChu.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/viewCart.jsp=UTF-8
+encoding//src/main/webapp/decorators/admin.jsp=UTF-8
+encoding//src/main/webapp/decorators/web.jsp=UTF-8
