@@ -16,4 +16,6 @@ public interface sanphamDAO {
 	public List<sanpham> listSPNB();
 	public sanpham getByID(int id);
 	public List<sanpham> getProductByCaterogy(int idlsp);
+	
+	public void save(sanpham sanpham);
 }

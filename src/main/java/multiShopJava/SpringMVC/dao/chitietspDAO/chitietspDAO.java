@@ -7,4 +7,5 @@ import multiShopJava.SpringMVC.model.chitietsp;
 public interface chitietspDAO {
 	public List<Object[]> getCTSP(int idsp);
 	public  List<Object[]> getCTSP(int idsp, int idms);
+	public void save(chitietsp chitietsp); 
 }

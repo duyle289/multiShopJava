@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller(value = "adminController")
 @RequestMapping(value={"admin"})
 public class adminController {
-	@RequestMapping(value={"/"},method = RequestMethod.GET)
+	@RequestMapping(value={""},method = RequestMethod.GET)
 	public ModelAndView index(HttpServletRequest request) {
 		ModelAndView model = new ModelAndView("admin/index");
 		return model;

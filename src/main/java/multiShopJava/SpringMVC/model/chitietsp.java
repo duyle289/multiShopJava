@@ -17,7 +17,6 @@ public class chitietsp {
 
 	private int id;
 	private int SOLUONGTON;
-	
 	private mausac ms;
 	private sanpham sp;
 	
@@ -51,6 +50,16 @@ public class chitietsp {
 
 	public void setSOLUONGTON(int sOLUONGTON) {
 		SOLUONGTON = sOLUONGTON;
+	}
+	public chitietsp() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public chitietsp(int sOLUONGTON, mausac ms, sanpham sp) {
+		super();
+		SOLUONGTON = sOLUONGTON;
+		this.ms = ms;
+		this.sp = sp;
 	}
 	
 

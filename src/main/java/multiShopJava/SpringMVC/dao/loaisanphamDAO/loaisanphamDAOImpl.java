@@ -2,11 +2,13 @@ package multiShopJava.SpringMVC.dao.loaisanphamDAO;
 
 import java.util.List;
 
+import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.CriteriaSpecification;
 import org.springframework.transaction.annotation.Transactional;
 
 import multiShopJava.SpringMVC.model.loaisanpham;
+import multiShopJava.SpringMVC.model.nhasanxuat;
 
 
 public class loaisanphamDAOImpl implements loaisanphamDAO {
@@ -23,5 +25,12 @@ public class loaisanphamDAOImpl implements loaisanphamDAO {
 				.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY).list();
 
 		return listLSP;
+	}
+	@Transactional
+	public loaisanpham getById(int id) {
+		
+		Session session = this.sessionFactory.getCurrentSession();
+		loaisanpham lsp = (loaisanpham) session.get(loaisanpham.class, id);
+		return lsp;
 	}
 }
