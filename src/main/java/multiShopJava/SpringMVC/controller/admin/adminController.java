@@ -17,5 +17,9 @@ public class adminController {
 	}
 	
 	
+<<<<<<< HEAD
 	//oke la
+=======
+	//test của Duy
+>>>>>>> 69208fcd8f20a9467b288ab013770cc28e309671
 }
