@@ -24,12 +24,15 @@ public class sanphamDAOImpl implements sanphamDAO{
 	public sanphamDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
+	
+	
 	@Transactional
-    @Override
     public void save(sanpham sanpham) {
         sessionFactory.getCurrentSession().save(sanpham);
     }
-	@Override
+	
+	
 	@Transactional
 	public List<sanpham> list() {
 		@SuppressWarnings("unchecked")
