@@ -21,6 +21,19 @@ public class chitietspDAOImpl implements chitietspDAO {
 	public chitietspDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
+	
+	@Transactional
+    @Override
+    public void save(chitietsp chitietsp) {
+		Session session = this.sessionFactory.getCurrentSession();
+		String sql = "insert into chitietsps (SOLUONGTON, MAMAU, MASP) values (:SOLUONGTON, :MAMAU, :MASP)";
+		Query query = session.createSQLQuery(sql);
+		query.setParameter("SOLUONGTON", chitietsp.getSOLUONGTON());
+		query.setParameter("MAMAU", chitietsp.getMs().getMAMAU());
+		query.setParameter("MASP", chitietsp.getSp().getMASP());
+		int result = query.executeUpdate();
+    }
+	
 	@Transactional
 	public  List<Object[]> getCTSP(int idsp) {
 		

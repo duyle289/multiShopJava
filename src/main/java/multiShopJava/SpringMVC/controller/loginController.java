@@ -40,9 +40,6 @@ public class loginController {
 		String tk = request.getParameter("taikhoan");
 		String mk = request.getParameter("matkhau");
 		String role = request.getParameter("role");
-		System.out.println(role);
-		System.out.println(tk);
-		System.out.println(mk);
 		if (role.equals("user")) {
 			khachhang kh = khachhangDAO.findByUsername(tk);
 			if (kh == null) {
