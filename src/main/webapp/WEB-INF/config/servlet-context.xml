@@ -83,6 +83,7 @@
 			<ref bean="sessionFactory" />
 		</constructor-arg>
 	</bean>
+	
 	<bean id="loaisanphamDAO"
 		class="multiShopJava.SpringMVC.dao.loaisanphamDAO.loaisanphamDAOImpl">
 		<constructor-arg>
