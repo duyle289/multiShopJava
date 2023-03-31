@@ -31,15 +31,13 @@
 								<td class="invert"><abbr title="Sửa">
 										<button type="button"
 											class="btn btn-info modal-change-password"
-											onclick="location.href='@Url.Action("
-											SuaSP", "Admin", new {id=item.MASP})'">
+											onclick="location.href='editcategory?id=${category.getMALSP()}'"}>
 											<i class="fa fa-pen"></i>
 										</button>
 								</abbr> <abbr title="Xem chi tiết sản phẩm">
 										<button type="button"
 											class="btn btn-info modal-change-password"
-											onclick="location.href='@Url.Action("
-											ChiTietSanPham", "Admin", new {id=item.MASP})'">
+											onclick="location.href='detailcategory?id=${category.getMALSP()}'"}>
 											<i class="fa fa-eye"></i>
 										</button>
 								</abbr> 

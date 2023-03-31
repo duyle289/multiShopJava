@@ -4,8 +4,7 @@
 		<div class="table-responsive">
 			<div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
 				<div class="col-sm-12">
-					<form:form method="POST" action="addCategory"
-						modelAttribute="loaisanpham" enctype="multipart/form-data">
+					<form:form method="POST" action="addCategory" modelAttribute="loaisanpham" enctype="multipart/form-data">
 						<div class="form-horizontal">
 							<h1 class="h3 mb-2 text-gray-800">Thêm mới loại sản phẩm</h1>
 							<hr />
@@ -28,10 +27,6 @@
 								</div>
 
 							</div>
-							
-							
-
-							
 								<form:label class="control-label col-md-2" path="TRANGTHAI">Trạng thái</form:label>
 								<div class="col-md-1">
 									<div class="checkbox">
@@ -49,8 +44,6 @@
 										href="category" class="btn btn-danger">Trở lại</a>
 								</div>
 							</div>
-
-						</div>
 					</form:form>
 				</div>
 			</div>

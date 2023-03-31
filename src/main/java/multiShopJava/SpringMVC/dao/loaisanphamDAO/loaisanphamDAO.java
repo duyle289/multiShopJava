@@ -9,4 +9,5 @@ public interface loaisanphamDAO {
 	public List<loaisanpham> list();
 	public loaisanpham getById(int id);
 	public void save(loaisanpham loaisanpham);
+	public void update(int id,String TenSp, Boolean TrangThai, String icon);
 }

@@ -63,8 +63,7 @@ public class loaisanpham {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public loaisanpham(String tENLOAISP, boolean tRANGTHAI, String iCON
-			) {
+	public loaisanpham(String tENLOAISP, boolean tRANGTHAI, String iCON) {
 		super();
 		TENLOAISP = tENLOAISP;
 		TRANGTHAI = tRANGTHAI;
