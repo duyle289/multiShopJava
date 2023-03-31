@@ -63,13 +63,13 @@ public class loaisanpham {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public loaisanpham(String tENLOAISP, boolean tRANGTHAI, String iCON,
-			Set<multiShopJava.SpringMVC.model.sanpham> sanpham) {
+	public loaisanpham(String tENLOAISP, boolean tRANGTHAI, String iCON
+			) {
 		super();
 		TENLOAISP = tENLOAISP;
 		TRANGTHAI = tRANGTHAI;
 		ICON = iCON;
-		this.sanpham = sanpham;
+		
 	}
 
 
