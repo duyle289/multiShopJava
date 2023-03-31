@@ -32,10 +32,12 @@ import multiShopJava.SpringMVC.model.sanpham;
 import multiShopJava.SpringMVC.model.uploadfile;
 
 @Controller(value = "productAdminController")
-@RequestMapping(value = { "admin" })
+@RequestMapping(value = {"admin"})
 public class productAdminController {
+	
 	@Autowired
 	private sanphamDAO sanphamDAO;
+	
 	@Autowired
 	private mausacDAO mausacDAO;
 	@Autowired
@@ -107,21 +109,7 @@ public class productAdminController {
 		}
 
 	}
-//	@RequestMapping(value={"/uploadImageProduct"},method = RequestMethod.POST, consumes = { MediaType.MULTIPART_FORM_DATA_VALUE })
-//	public ModelAndView uploadImageProduct(HttpServletRequest  request,@RequestParam("HINHANH") MultipartFile img) {
-//		//,@RequestParam("HINHANH") MultipartFile img
-////		System.out.println("112312312");
-////		ModelAndView model = new ModelAndView("admin/addproduct");
-////		int ms= Integer.parseInt(request.getParameter("mausac"));
-////		int lsp= Integer.parseInt(request.getParameter("loaisanpham"));
-////		int nsx= Integer.parseInt(request.getParameter("nhasanxuat"));
-////		System.out.println(sanpham.getHINHANH());
-////		System.out.println(sanpham.getTENSP());
-////		System.out.println(ms);
-////		System.out.println(lsp);
-////		System.out.println(nsx);
-//		return addProduct(request,"ok");	
-//	}
+
 
 	public String filename(MultipartFile img) {
 		LocalDate t = LocalDate.now();

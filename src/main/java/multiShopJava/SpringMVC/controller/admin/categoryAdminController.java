@@ -73,7 +73,7 @@ public class categoryAdminController {
 			try {
 				
 				
-		loaisanphamDAO.save(loaisanpham);
+				loaisanphamDAO.save(loaisanpham);
 				return listcategory(request);
 			}catch (Exception e) {
 				System.out.println(e);

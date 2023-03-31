@@ -113,8 +113,12 @@
 
 					</div>
 				</div></li>
+<<<<<<< HEAD
 			<!--hoang-->
             <li class="nav-item">
+=======
+			            <li class="nav-item">
+>>>>>>> 69208fcd8f20a9467b288ab013770cc28e309671
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
                    aria-expanded="true" aria-controls="collapseUtilities1">
                     <i class="fa fa-tags nav_icon"></i>
@@ -124,7 +128,40 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Quản lý loại sản phẩm:</h6>
+<<<<<<< HEAD
                         <a class="collapse-item" href="category">Danh sách</a>
+=======
+                        <a class="collapse-item" href="">Danh sách</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2"
+                   aria-expanded="true" aria-controls="collapseUtilities2">
+                    <i class="fa fa-building nav_icon"></i>
+                    <span>Quản lý nhà sản xuất</span>
+                </a>
+                <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities2"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý nhà sản xuất:</h6>
+                        <a class="collapse-item" href="">Danh sách</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities3"
+                   aria-expanded="true" aria-controls="collapseUtilities3">
+                    <i class="fa fa-shopping-cart nav_icon"></i>
+                    <span>Quản lý đơn hàng</span>
+                </a>
+                <div id="collapseUtilities3" class="collapse" aria-labelledby="headingUtilities3"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý đơn hàng:</h6>
+                        <a class="collapse-item" href="">Danh sách</a>
+
+>>>>>>> 69208fcd8f20a9467b288ab013770cc28e309671
                     </div>
                 </div>
             </li>
