@@ -48,7 +48,12 @@ public class loaisanphamDAOImpl implements loaisanphamDAO {
 	    lsp.setTENLOAISP(TenSp);
 	    lsp.setTRANGTHAI(TrangThai);
 	    lsp.setICON(icon);
-	    sessionFactory.getCurrentSession().update(lsp);
+	    session.update(lsp);
 	}
-	
+	@Transactional
+	public void delete(int id) {
+	    Session session = sessionFactory.getCurrentSession();
+	    loaisanpham lsp = getById(id);
+	    session.delete(lsp);
+	}
 }

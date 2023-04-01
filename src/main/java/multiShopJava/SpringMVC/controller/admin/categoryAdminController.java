@@ -79,9 +79,10 @@ public class categoryAdminController {
 			}
 
 		} else {
-			redirectAttributes.addFlashAttribute("listcategory", lsp);
-			return "redirect:/addCategory";
-			//return addCategory(request, hinhanhsp.message, lsp);
+			redirectAttributes.addFlashAttribute("loaisanpham", lsp);
+			redirectAttributes.addFlashAttribute("uploadInfor", hinhanhsp.message);
+			return "redirect:addCategory";
+			
 		}
 
 	}
@@ -102,7 +103,7 @@ public class categoryAdminController {
 		return model;
 	}
 	@RequestMapping(value = {"/editcategory"}, method = RequestMethod.POST, consumes = { "multipart/form-data" })
-	public String editcategory(HttpServletRequest request,
+	public String editcategory(HttpServletRequest request, @ModelAttribute("loaisanpham") loaisanpham lsp,
 			@RequestParam("hinhanh") MultipartFile img,RedirectAttributes redirectAttributes) {
 		String name =  request.getParameter("TENLOAI");
 		int id=  Integer.valueOf(request.getParameter("MALSP"));
@@ -126,12 +127,42 @@ public class categoryAdminController {
 
 		} else {
 			
-			return "redirect:/category";
+			redirectAttributes.addFlashAttribute("uploadInfor", hinhanhsp.message);
+			return "redirect:editcategory?id="+id;
 			
 		}
 		
 
 	}
+	
+	
+	@RequestMapping(value={"/deletecategory"},method = RequestMethod.GET)
+	public ModelAndView deletecategory(@RequestParam int id,HttpServletRequest request ,loaisanpham loaisanpham) {
+		loaisanpham lsp = loaisanphamDAO.getById(id);
+		
+		ModelAndView model = new ModelAndView("admin/deletecategory");
+		model.addObject("category", lsp);
+		return model;
+	}
+	
+	@RequestMapping(value = {"/deletecategory"}, method = RequestMethod.POST, consumes = { "multipart/form-data" })
+	public String deletecategory(HttpServletRequest request, @ModelAttribute("loaisanpham") loaisanpham lsp,RedirectAttributes redirectAttributes) {
+		
+		int id=  Integer.valueOf(request.getParameter("MALSP"));	
+		
+		System.out.println(id);
+		// Upload file	
+		
+		try {
+				
+			loaisanphamDAO.delete(id);
+			return "redirect:category";
+		} catch (Exception e) {
+			System.out.println(e);
+			return "redirect:category";
+		}	
+	}
+	
 	
 public String filename(MultipartFile img) {
 		LocalDate t = LocalDate.now();
@@ -141,7 +172,7 @@ public String filename(MultipartFile img) {
 		return filename;
 	}
 
-	public uploadfile uploadfile(HttpServletRequest request, MultipartFile img) {
+public uploadfile uploadfile(HttpServletRequest request, MultipartFile img) {
 		uploadfile result = new uploadfile();
 		String filename = filename(img);
 		String saveDirectory = request.getServletContext().getRealPath("resources/HinhAnhSP");

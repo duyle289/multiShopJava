@@ -9,7 +9,7 @@
 							<h1 class="h3 mb-2 text-gray-800">Cập nhật mới loại sản phẩm </h1>
 							<hr />
 							
-							<div class="form-group">
+							<div class="form-group" style="display:none;">
 								<label class="control-label col-md-2" >id</label>
 								<div class="col-md-10">
 									<input class="form-control" type="text" name ="MALSP"  value="${category.getMALSP()}" />
