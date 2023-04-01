@@ -1,12 +1,10 @@
 eclipse.preferences.version=1
 encoding//src/main/webapp/WEB-INF/views/Login.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/addproducer.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/addproduct.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/listproducer.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/listproduct.jsp=UTF-8
-<<<<<<< HEAD
-encoding//src/main/webapp/WEB-INF/views/admin/test1.jsp=UTF-8
-=======
-encoding//src/main/webapp/WEB-INF/views/admin/test.jsp=UTF-8
->>>>>>> 69208fcd8f20a9467b288ab013770cc28e309671
+encoding//src/main/webapp/WEB-INF/views/admin/updateproducer.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/Product-detail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/ShowProduct.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/TrangChu.jsp=UTF-8

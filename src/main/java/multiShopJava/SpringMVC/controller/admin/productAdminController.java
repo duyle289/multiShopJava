@@ -109,7 +109,6 @@ public class productAdminController {
 
 	}
 
-
 	public String filename(MultipartFile img) {
 		LocalDate t = LocalDate.now();
 		Random rand = new Random();
