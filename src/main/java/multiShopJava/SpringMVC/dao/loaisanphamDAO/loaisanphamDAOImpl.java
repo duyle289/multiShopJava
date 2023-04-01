@@ -26,11 +26,34 @@ public class loaisanphamDAOImpl implements loaisanphamDAO {
 
 		return listLSP;
 	}
+	
 	@Transactional
 	public loaisanpham getById(int id) {
 		
 		Session session = this.sessionFactory.getCurrentSession();
 		loaisanpham lsp = (loaisanpham) session.get(loaisanpham.class, id);
 		return lsp;
+	}
+	
+	@Transactional
+	public void save(loaisanpham loaisanpham) {
+	
+		sessionFactory.getCurrentSession().save(loaisanpham);
+	}
+	
+	@Transactional
+	public void update(int id,String TenSp, Boolean TrangThai, String icon) {
+	    Session session = sessionFactory.getCurrentSession();
+	    loaisanpham lsp =(loaisanpham) session.get(loaisanpham.class, id);
+	    lsp.setTENLOAISP(TenSp);
+	    lsp.setTRANGTHAI(TrangThai);
+	    lsp.setICON(icon);
+	    session.update(lsp);
+	}
+	@Transactional
+	public void delete(int id) {
+	    Session session = sessionFactory.getCurrentSession();
+	    loaisanpham lsp = getById(id);
+	    session.delete(lsp);
 	}
 }
