@@ -89,7 +89,7 @@ public class nhanvien {
 		// TODO Auto-generated constructor stub
 	}
 	public nhanvien(String tENNV, String uSERNAME, String pASSWORD, String sDT, String cCCD, String eMAIL,
-			boolean tRANGTHAI, Set<multiShopJava.SpringMVC.model.hoadon> hoadon) {
+			boolean tRANGTHAI) {
 		super();
 		TENNV = tENNV;
 		USERNAME = uSERNAME;
@@ -98,7 +98,6 @@ public class nhanvien {
 		CCCD = cCCD;
 		EMAIL = eMAIL;
 		TRANGTHAI = tRANGTHAI;
-		this.hoadon = hoadon;
 	}
 
 }
