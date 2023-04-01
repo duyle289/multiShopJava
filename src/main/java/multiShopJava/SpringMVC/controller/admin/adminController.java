@@ -15,4 +15,5 @@ public class adminController {
 		ModelAndView model = new ModelAndView("admin/index");
 		return model;
 	}
+
 }

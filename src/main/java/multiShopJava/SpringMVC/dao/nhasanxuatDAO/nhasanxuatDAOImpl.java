@@ -32,4 +32,31 @@ public class nhasanxuatDAOImpl implements nhasanxuatDAO{
 		nhasanxuat nsx = (nhasanxuat) session.get(nhasanxuat.class, id);
 		return nsx;
 	}
+	@Transactional
+	public void save(nhasanxuat nhasanxuat) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().save(nhasanxuat);
+		
+	}
+	@Transactional
+	public void delete(nhasanxuat nhasanxuat) {
+		// TODO Auto-generated method stub
+		
+	}
+//	@Override
+//	public void update(nhasanxuat nhasanxuat) {
+//		// TODO Auto-generated method stub
+//		
+//	}
+	@Transactional
+	public void update(int id, String name, boolean isTT, String filename) {
+		// TODO Auto-generated method stub
+		 Session session = sessionFactory.getCurrentSession();
+		    nhasanxuat lsp =(nhasanxuat) session.get(nhasanxuat.class, id);
+		    lsp.setTENNSX(name);
+		    lsp.setTRANGTHAI(isTT);
+		    lsp.setICON(filename);
+		    session.update(lsp);
+		
+	}
 }
