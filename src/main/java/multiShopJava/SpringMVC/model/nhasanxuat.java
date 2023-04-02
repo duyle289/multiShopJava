@@ -64,13 +64,12 @@ public class nhasanxuat {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public nhasanxuat(String tENNSX, boolean tRANGTHAI, String iCON,
-			Set<multiShopJava.SpringMVC.model.sanpham> sanpham) {
+	public nhasanxuat(String tENNSX, boolean tRANGTHAI, String iCON) {
 		super();
 		TENNSX = tENNSX;
 		TRANGTHAI = tRANGTHAI;
 		ICON = iCON;
-		this.sanpham = sanpham;
+		
 	}
 
 

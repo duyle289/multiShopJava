@@ -63,6 +63,10 @@
 									<input type="file" class="form-control"
 										name="hinhanh"  multiple="multiple"/>
 									<span style="color: red">${uploadInfor}</span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 								</div>
 
 							</div>
@@ -112,6 +116,7 @@
 									</div>
 								</div>
 							</div>
+<<<<<<< HEAD
 							
 							<div class="form-group">
 								<div class="col-md-offset-2 col-md-10">
@@ -120,6 +125,9 @@
 							</div>
 							
 							
+=======
+
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 
 							<div class="form-group">
 								<div class="col-md-offset-2 col-md-10">

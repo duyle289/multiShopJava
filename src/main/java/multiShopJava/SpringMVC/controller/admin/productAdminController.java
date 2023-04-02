@@ -83,6 +83,7 @@ public class productAdminController {
 			
 			try {
 				sanphamDAO.save(sanpham);
+				
 				String[] listms = request.getParameterValues("mausac");
 				if (listms != null && listms.length > 0) {
 					for(String mausp : listms) {
@@ -110,7 +111,6 @@ public class productAdminController {
 		}
 
 	}
-
 
 	public String filename(MultipartFile img) {
 		LocalDate t = LocalDate.now();

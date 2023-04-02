@@ -113,6 +113,7 @@
 
 					</div>
 				</div></li>
+<<<<<<< HEAD
 			            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
                    aria-expanded="true" aria-controls="collapseUtilities1">
@@ -156,6 +157,9 @@
                     </div>
                 </div>
             </li>
+=======
+
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 			<!-- Divider -->
 			<hr class="sidebar-divider d-none d-md-block">
 

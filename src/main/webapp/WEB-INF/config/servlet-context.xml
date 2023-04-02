@@ -45,9 +45,11 @@
 		<property name="driverClassName"
 			value="com.mysql.cj.jdbc.Driver" />
 		<property name="url"
-			value="jdbc:mysql://127.0.0.1:3306/qlbanlaptop" />
+
+			value="jdbc:mysql://127.0.0.1:9999/qlbanlaptop" />
 		<property name="username" value="root" />
-		<property name="password" value="2809" />
+		<property name="password" value="123456" />
+
 	</bean>
 
 	<bean id="sessionFactory"

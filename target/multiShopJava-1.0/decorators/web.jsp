@@ -69,8 +69,12 @@
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="/multiShopJava/login">Đăng
 									nhập</a>
+<<<<<<< HEAD
 								<a class="dropdown-item" href="/multiShopJava/Customer/register">Đăng
 									Ký</a>
+=======
+								<button class="dropdown-item" type="button">Đăng ký</button>
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 							</div>
 						</div>
 					</div>
@@ -110,7 +114,10 @@
 	<!-- Topbar End -->
 
 	<!-- co' the su dung include de add nhung file partial -->
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 	<dec:body />
 
 	<!-- Footer Start -->

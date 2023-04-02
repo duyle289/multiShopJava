@@ -74,7 +74,7 @@
 					data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Custom Components:</h6>
-						<a class="collapse-item" href="@Url.Action("ListAdmin","Admin")">Danh
+						<a class="collapse-item" href="staff">Danh
 							sách</a>
 					</div>
 				</div></li>
@@ -114,7 +114,12 @@
 
 					</div>
 				</div></li>
+
+			<!--hoang-->
+            <li class="nav-item">
+
 			            <li class="nav-item">
+
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
                    aria-expanded="true" aria-controls="collapseUtilities1">
                     <i class="fa fa-tags nav_icon"></i>
@@ -124,7 +129,10 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Quản lý loại sản phẩm:</h6>
-                        <a class="collapse-item" href="">Danh sách</a>
+
+                        <a class="collapse-item" href="category">Danh sách</a>
+
+                        
                     </div>
                 </div>
             </li>
@@ -138,7 +146,7 @@
                      data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Quản lý nhà sản xuất:</h6>
-                        <a class="collapse-item" href="">Danh sách</a>
+                        <a class="collapse-item" href="producer">Danh sách</a>
                     </div>
                 </div>
             </li>
@@ -154,6 +162,7 @@
                         <h6 class="collapse-header">Quản lý đơn hàng:</h6>
                         <a class="collapse-item" href="order">Danh sách</a>
 
+>>>>>>> 69208fcd8f20a9467b288ab013770cc28e309671
                     </div>
                 </div>
             </li>

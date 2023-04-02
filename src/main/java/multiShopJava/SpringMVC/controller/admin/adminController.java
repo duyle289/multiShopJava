@@ -18,6 +18,7 @@ public class adminController {
 		ModelAndView model = new ModelAndView("admin/index");
 		return model;
 	}
+
 	@RequestMapping(value={"/logout"},method = RequestMethod.GET)
 	public String logout(HttpServletRequest request) {
 		HttpSession session = request.getSession(true);
