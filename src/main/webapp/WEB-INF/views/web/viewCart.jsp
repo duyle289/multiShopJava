@@ -44,19 +44,13 @@
 		<div class="col-lg-9">
 			<nav
 				class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
-				<a class="text-decoration-none d-block d-lg-none"> <span
-					class="h1 text-uppercase text-dark bg-light px-2">Multi</span> <span
-					class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
-				</a>
-				<button type="button" class="navbar-toggler" data-toggle="collapse"
-					data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+				
 				<div class="collapse navbar-collapse justify-content-between"
 					id="navbarCollapse">
 					<div class="navbar-nav mr-auto py-0">
 						<a href="/multiShopJava/" class="nav-item nav-link">Trang chủ</a>
-						<a href="/multiShopJava/Product/ShowAllProduct/1" class="nav-item nav-link">Shop</a>
+						<a href="/multiShopJava/Product/ShowAllProduct/1"
+							class="nav-item nav-link">Shop</a>
 					</div>
 					<div class="navbar-nav ml-auto py-0 d-none d-lg-block">
 						<a href="/multiShopJava/Cart/ViewCart" class="btn px-0 ml-3">
@@ -182,29 +176,40 @@
 			</table>
 		</div>
 		<div class="col-lg-4">
-			<!-- <form class="mb-30" action="">
-				<div class="input-group">
-					<input type="text" class="form-control border-0 p-4"
-						placeholder="Coupon Code">
-					<div class="input-group-append">
-						<button class="btn btn-primary">Apply Coupon</button>
+		<form action="/multiShopJava/order/" method="post">
+			<div class="mb-5 collapse show" id="shipping-address" style="">
+				<h5 class="section-title position-relative text-uppercase mb-3">
+					<span class="bg-secondary pr-3">Địa chỉ giao hàng</span>
+				</h5>
+				<div class="bg-light p-30">
+					<div class="row">
+						<div class="col-md-6 form-group">
+							<label>Họ và tên</label> <input name="TENKH" class="form-control"
+								type="text">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Số điện thoại</label> <input name="SDT"
+								class="form-control" type="text">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>E-mail</label> <input name="EMAIL" class="form-control"
+								type="text">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Yêu cầu khác</label> <input name="YCK"
+								class="form-control" type="text">
+						</div>
+						<div class="col-md form-group">
+							<label>Địa chỉ giao hàng</label> <input name="DCGH"
+								class="form-control" type="text">
+						</div>
 					</div>
 				</div>
-			</form> -->
+			</div>
 			<h5 class="section-title position-relative text-uppercase mb-3">
 				<span class="bg-secondary pr-3">Tổng tiền giỏ hàng</span>
 			</h5>
 			<div class="bg-light p-30 mb-5">
-				<!-- <div class="border-bottom pb-2">
-					<div class="d-flex justify-content-between mb-3">
-						<h6>Subtotal</h6>
-						<h6>$150</h6>
-					</div>
-					<div class="d-flex justify-content-between">
-						<h6 class="font-weight-medium">Shipping</h6>
-						<h6 class="font-weight-medium">$10</h6>
-					</div>
-				</div> -->
 				<div class="pt-2">
 					<div class="d-flex justify-content-between mt-2">
 						<h5>Tổng:</h5>
@@ -213,11 +218,12 @@
 								value="${total}" />
 						</h5>
 					</div>
-					<a href="/multiShopJava/order/"
-						class="btn btn-block btn-primary font-weight-bold my-3 py-3">
-						Đặt hàng</a>
+					<input type="submit" 
+						class="btn btn-block btn-primary font-weight-bold my-3 py-3"
+						value="Đặt hàng" />
 				</div>
 			</div>
+		</form>
 		</div>
 	</div>
 </div>

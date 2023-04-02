@@ -43,14 +43,6 @@
 		<div class="col-lg-9">
 			<nav
 				class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
-				<a href="" class="text-decoration-none d-block d-lg-none"> <span
-					class="h1 text-uppercase text-dark bg-light px-2">Multi</span> <span
-					class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
-				</a>
-				<button type="button" class="navbar-toggler" data-toggle="collapse"
-					data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
-				</button>
 				<div class="collapse navbar-collapse justify-content-between"
 					id="navbarCollapse">
 					<div class="navbar-nav mr-auto py-0">
@@ -96,28 +88,24 @@
 					<li data-target="#header-carousel" data-slide-to="2"></li>
 				</ol>
 				<div class="carousel-inner">
-					<div class="carousel-item position-relative active"
-						style="height: 430px;">
-						<img class="position-absolute w-100 h-100"
-							src="img/carousel-1.jpg" style="object-fit: cover;">
-					</div>
-					<div class="carousel-item position-relative" style="height: 430px;">
-						<img class="position-absolute w-100 h-100"
-							src="img/carousel-2.jpg" style="object-fit: cover;">
-					</div>
-					<div class="carousel-item position-relative" style="height: 430px;">
-						<img class="position-absolute w-100 h-100"
-							src="img/carousel-3.jpg" style="object-fit: cover;">
-					</div>
+					<div class="carousel-item position-relative active" style="height: 430px;">
+                        <img class="position-absolute w-100 h-100" src="<c:url value='/resources/banner/bannerAP.jpg'/>" style="object-fit: cover;">
+                    </div>
+                    <div class="carousel-item position-relative active" style="height: 430px;">
+                        <img class="position-absolute w-100 h-100" src="<c:url value='/resources/banner/banner_blackFriday.png'/>" style="object-fit: cover;">
+                    </div>
+                    <div class="carousel-item position-relative active" style="height: 430px;">
+                        <img class="position-absolute w-100 h-100" src="<c:url value='/resources/banner/bannerLaptop.jpg'/>" style="object-fit: cover;">
+                    </div>
 				</div>
 			</div>
 		</div>
 		<div class="col-lg-4">
 			<div class="product-offer mb-30" style="height: 200px;">
-				<img class="img-fluid" src="img/offer-1.jpg" alt="">
+				<img class="img-fluid" src="<c:url value='/resources/banner/banner-showroom.jpg'/>" alt="">
 			</div>
 			<div class="product-offer mb-30" style="height: 200px;">
-				<img class="img-fluid" src="img/offer-2.jpg" alt="">
+				<img class="img-fluid" src="<c:url value='/resources/banner/banner-showroom2.jpg'/>" alt="">
 			</div>
 		</div>
 	</div>
@@ -244,12 +232,12 @@
 	<div class="row px-xl-5">
 		<div class="col-md-6">
 			<div class="product-offer mb-30" style="height: 300px;">
-				<img class="img-fluid" src="img/offer-1.jpg" alt="">
+				<img class="img-fluid" src="<c:url value='/resources/banner/banner3.jpg'/>" alt="">
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div class="product-offer mb-30" style="height: 300px;">
-				<img class="img-fluid" src="img/offer-2.jpg" alt="">
+				<img class="img-fluid" src="<c:url value='/resources/banner/banner4.jpg'/>" alt="">
 			</div>
 		</div>
 	</div>

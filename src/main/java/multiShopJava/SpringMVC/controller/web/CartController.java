@@ -173,16 +173,6 @@ public class CartController {
 		return lstgh.stream().mapToInt(o -> o.getSoluong()).sum();
 	}
 
-//     private double tongTien() // lấy tổng tiền của giỏ hàng
-//     {
-//         double tongTien = 0;
-//         @SuppressWarnings("unchecked")
-//         List<cart> listProductInCart = (List<cart>) session.getAttribute("cart");
-//         if (listProductInCart != null)
-//         {
-//             tongTien = listProductInCart.stream().mapToDouble(o->o.tongtien).sum();
-//         }
-//         return tongTien;
-//     }
+
 
 }

@@ -1,5 +1,7 @@
 package multiShopJava.SpringMVC.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -11,22 +13,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "chitiethds")
-public class chitiethd {
-	private int id;
+public class chitiethd implements Serializable{
 	private int SOLUONG;
 	private double DONGIA;
 	private hoadon hd;
 	private mausac ms;
 	private sanpham sp;
 	
-	
-	@Id
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public int getSOLUONG() {
 		return SOLUONG;
 	}
@@ -39,7 +33,7 @@ public class chitiethd {
 	public void setDONGIA(double dONGIA) {
 		DONGIA = dONGIA;
 	}
-	
+	@Id
 	@ManyToOne
     @JoinColumn(name = "MAHD")
 	public hoadon getHd() {
@@ -48,6 +42,7 @@ public class chitiethd {
 	public void setHd(hoadon hd) {
 		this.hd = hd;
 	}
+	@Id
 	@ManyToOne
     @JoinColumn(name = "MAMAU")
 	public mausac getMs() {
@@ -56,6 +51,7 @@ public class chitiethd {
 	public void setMs(mausac ms) {
 		this.ms = ms;
 	}
+	@Id
 	@ManyToOne
     @JoinColumn(name = "MASP")
 	public sanpham getSp() {
@@ -63,6 +59,18 @@ public class chitiethd {
 	}
 	public void setSp(sanpham sp) {
 		this.sp = sp;
+	}
+	public chitiethd(int sOLUONG, double dONGIA, hoadon hd, mausac ms, sanpham sp) {
+		super();
+		SOLUONG = sOLUONG;
+		DONGIA = dONGIA;
+		this.hd = hd;
+		this.ms = ms;
+		this.sp = sp;
+	}
+	public chitiethd() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

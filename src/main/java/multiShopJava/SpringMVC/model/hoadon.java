@@ -17,7 +17,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hoadons")
 public class hoadon {
-	private int MAHD;
+	private String MAHD;
 	private Date NGAYLAP;
 	private Date NGAYGIAO;
 	private double TONGTIEN;
@@ -30,12 +30,11 @@ public class hoadon {
 	private nhanvien nv;
 	private Set<chitiethd> chitiethd;
 	@Id
-	@GeneratedValue
 	@Column(name = "MAHD")
-	public int getMAHD() {
+	public String getMAHD() {
 		return MAHD;
 	}
-	public void setMAHD(int mAHD) {
+	public void setMAHD(String mAHD) {
 		MAHD = mAHD;
 	}
 	public Date getNGAYLAP() {
@@ -119,9 +118,10 @@ public class hoadon {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public hoadon(Date nGAYLAP, Date nGAYGIAO, double tONGTIEN, int tRANGTHAI, String dIACHIGIAOHANG, String tENKH,
-			String sDTKH, String yEUCAUKHAC, khachhang kh, nhanvien nv) {
+	public hoadon(String mAHD, Date nGAYLAP, Date nGAYGIAO, double tONGTIEN, int tRANGTHAI, String dIACHIGIAOHANG,
+			String tENKH, String sDTKH, String yEUCAUKHAC, khachhang kh, nhanvien nv) {
 		super();
+		MAHD = mAHD;
 		NGAYLAP = nGAYLAP;
 		NGAYGIAO = nGAYGIAO;
 		TONGTIEN = tONGTIEN;
@@ -133,6 +133,7 @@ public class hoadon {
 		this.kh = kh;
 		this.nv = nv;
 	}
+	
 
 
 }

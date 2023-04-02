@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import multiShopJava.SpringMVC.dao.loaisanphamDAO.loaisanphamDAO;
 import multiShopJava.SpringMVC.dao.mausacDAO.mausacDAO;
@@ -56,22 +57,20 @@ public class productAdminController {
 	}
 
 	@RequestMapping(value = { "/addProduct" }, method = RequestMethod.GET)
-	public ModelAndView addProduct(HttpServletRequest request, String uploadInfor, sanpham sanpham) {
-		sanpham sp = (sanpham != null) ? sanpham : new sanpham();
-		ModelAndView model = new ModelAndView("admin/addproduct", "sanpham", sp);
+	public ModelAndView addProduct(HttpServletRequest request,sanpham sp) {
+		ModelAndView model = new ModelAndView("admin/addproduct");
 		List<mausac> listms = mausacDAO.list();
 		List<loaisanpham> listlsp = loaisanphamDAO.list();
 		List<nhasanxuat> listnsx = nhasanxuatDAO.list();
 		model.addObject("listms", listms);
 		model.addObject("listlsp", listlsp);
 		model.addObject("listnsx", listnsx);
-		model.addObject("uploadInfor", uploadInfor);
 		return model;
 	}
 
 	@RequestMapping(value = { "/addProduct" }, method = RequestMethod.POST, consumes = { "multipart/form-data" })
-	public ModelAndView addProduct(HttpServletRequest request, @ModelAttribute("sanpham") sanpham sp,
-			@RequestParam("hinhanh") MultipartFile img) {
+	public String addProduct(HttpServletRequest request, @ModelAttribute("sanpham") sanpham sp,
+			@RequestParam("hinhanh") MultipartFile img,RedirectAttributes redirectAttributes) {
 
 		// Upload file
 		uploadfile hinhanhsp = uploadfile(request,img);
@@ -93,18 +92,21 @@ public class productAdminController {
 					}
 				}else {
 					System.out.println("lõiiiiiii");
+					redirectAttributes.addFlashAttribute("message", "Có lỗi xảy ra");
 				}
-				return listProduct(request);
+				return "redirect:product";
 			}catch (Exception e) {
 				System.out.println(e);
-				return addProduct(request, "", sanpham);
+				redirectAttributes.addFlashAttribute("message", "Có lỗi xảy ra");
+				return "redirect:addProduct";
 			}
 			
 			
 			
 		} else {
-			
-			return addProduct(request, hinhanhsp.message, sp);
+			redirectAttributes.addFlashAttribute("sanpham", sp);
+			redirectAttributes.addFlashAttribute("uploadInfor", hinhanhsp.message);
+			return "redirect:addProduct";
 		}
 
 	}

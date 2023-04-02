@@ -1,6 +1,7 @@
 package multiShopJava.SpringMVC.model;
 
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -13,21 +14,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "chitietsps")
-public class chitietsp {
-
-	private int id;
+public class chitietsp implements Serializable{
 	private int SOLUONGTON;
 	private mausac ms;
 	private sanpham sp;
 	
 	@Id
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	
 	@ManyToOne
     @JoinColumn(name = "MAMAU")
 	public mausac getMs() {
@@ -36,6 +28,7 @@ public class chitietsp {
 	public void setMs(mausac ms) {
 		this.ms = ms;
 	}
+	@Id
 	@ManyToOne
     @JoinColumn(name = "MASP")
 	public sanpham getSp() {
