@@ -113,7 +113,53 @@
 
 					</div>
 				</div></li>
+<<<<<<< HEAD
+			            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
+                   aria-expanded="true" aria-controls="collapseUtilities1">
+                    <i class="fa fa-tags nav_icon"></i>
+                    <span>Quản lý loại sản phẩm</span>
+                </a>
+                <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities1"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý loại sản phẩm:</h6>
+                        <a class="collapse-item" href="">Danh sách</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2"
+                   aria-expanded="true" aria-controls="collapseUtilities2">
+                    <i class="fa fa-building nav_icon"></i>
+                    <span>Quản lý nhà sản xuất</span>
+                </a>
+                <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities2"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý nhà sản xuất:</h6>
+                        <a class="collapse-item" href="">Danh sách</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities3"
+                   aria-expanded="true" aria-controls="collapseUtilities3">
+                    <i class="fa fa-shopping-cart nav_icon"></i>
+                    <span>Quản lý đơn hàng</span>
+                </a>
+                <div id="collapseUtilities3" class="collapse" aria-labelledby="headingUtilities3"
+                     data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý đơn hàng:</h6>
+                        <a class="collapse-item" href="">Danh sách</a>
 
+                    </div>
+                </div>
+            </li>
+=======
+
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 			<!-- Divider -->
 			<hr class="sidebar-divider d-none d-md-block">
 

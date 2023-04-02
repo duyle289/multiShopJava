@@ -68,11 +68,10 @@
 									${error }
 									<hr>
 									<div class="text-center">
-										<a class="small" href="forgot-password.html">Forgot
-											Password?</a>
+										<a class="small" href="Customer/forgotPassword">Quên mật khẩu?</a>
 									</div>
 									<div class="text-center">
-										<a class="small" href="register.html">Create an Account!</a>
+										<a class="small" href="Customer/register">Tạo tài khoản</a>
 									</div>
 								</div>
 							</div>

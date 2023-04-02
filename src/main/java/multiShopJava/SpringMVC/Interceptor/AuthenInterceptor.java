@@ -12,15 +12,15 @@ public class AuthenInterceptor extends HandlerInterceptorAdapter {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		HttpSession session = request.getSession(false);
-		if (request.getRequestURI().toString().contains("order")) {
-			if (session != null && session.getAttribute("khachhang") != null) {
+		if (request.getRequestURI().toString().contains("admin")) {
+			if (session != null && session.getAttribute("nhanvien") != null) {
 				return true;
 			} else {
 				response.sendRedirect(request.getContextPath() + "/login");
 				return false;
 			}
-		}else if(request.getRequestURI().toString().contains("admin")){
-			if (session != null && session.getAttribute("nhanvien") != null) {
+		} else if (request.getRequestURI().toString().contains("order")) {
+			if (session != null && session.getAttribute("khachhang") != null) {
 				return true;
 			} else {
 				response.sendRedirect(request.getContextPath() + "/login");

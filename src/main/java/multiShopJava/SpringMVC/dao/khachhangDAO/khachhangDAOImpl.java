@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.hibernate.Query;
 import multiShopJava.SpringMVC.model.khachhang;
+import multiShopJava.SpringMVC.model.sanpham;
 
 public class khachhangDAOImpl implements khachhangDAO {
 	private SessionFactory sessionFactory;
@@ -19,8 +20,18 @@ public class khachhangDAOImpl implements khachhangDAO {
 	}
 	@Transactional
     @Override
+    public List<khachhang> list() {
+    	@SuppressWarnings("unchecked")
+		List<khachhang> listCus = sessionFactory.getCurrentSession().createCriteria(khachhang.class)
+				.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY).list();
+
+		return listCus;
+    }
+	@Transactional
+    @Override
     public void save(khachhang khachhang) {
-        sessionFactory.getCurrentSession().save(khachhang);
+		Session session = sessionFactory.getCurrentSession();
+		session.save(khachhang);
     }
 	@Transactional
     @Override
@@ -42,4 +53,14 @@ public class khachhangDAOImpl implements khachhangDAO {
         query.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
         return (khachhang)query.uniqueResult();
     }
+	@Transactional
+    @Override
+	public khachhang findByEmail(String email) {
+		Session session = this.sessionFactory.getCurrentSession();
+    	String sql ="FROM khachhang WHERE EMAIL =:email";
+    	Query query = session.createQuery(sql);
+        query.setParameter("email", email);
+        query.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
+        return (khachhang)query.uniqueResult();
+	}
 }

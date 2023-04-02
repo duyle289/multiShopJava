@@ -63,7 +63,6 @@
 									<input type="file" class="form-control"
 										name="hinhanh"  multiple="multiple"/>
 									<span style="color: red">${uploadInfor}</span>
-
 								</div>
 
 							</div>
@@ -113,7 +112,14 @@
 									</div>
 								</div>
 							</div>
-
+							
+							<div class="form-group">
+								<div class="col-md-offset-2 col-md-10">
+									<span style="color: red">${message}</span>
+								</div>
+							</div>
+							
+							
 
 							<div class="form-group">
 								<div class="col-md-offset-2 col-md-10">

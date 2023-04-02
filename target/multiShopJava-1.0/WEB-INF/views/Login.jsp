@@ -68,11 +68,18 @@
 									${error }
 									<hr>
 									<div class="text-center">
+<<<<<<< HEAD
+										<a class="small" href="Customer/forgotPassword">Quên mật khẩu?</a>
+									</div>
+									<div class="text-center">
+										<a class="small" href="Customer/register">Tạo tài khoản</a>
+=======
 										<a class="small" href="forgot-password.html">Forgot
 											Password?</a>
 									</div>
 									<div class="text-center">
 										<a class="small" href="register.html">Create an Account!</a>
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 									</div>
 								</div>
 							</div>

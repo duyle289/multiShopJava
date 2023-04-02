@@ -3,6 +3,11 @@ encoding//src/main/webapp/WEB-INF/views/Login.jsp=UTF-8
 <<<<<<< HEAD
 encoding//src/main/webapp/WEB-INF/views/admin/addStaff.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/addproduct.jsp=UTF-8
+<<<<<<< HEAD
+encoding//src/main/webapp/WEB-INF/views/admin/listorder.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/listproduct.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/admin/orderdetail.jsp=UTF-8
+=======
 encoding//src/main/webapp/WEB-INF/views/admin/editStaff.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/listproduct.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/liststaff.jsp=UTF-8
@@ -21,9 +26,13 @@ encoding//src/main/webapp/WEB-INF/views/admin/listcategory.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/listproduct.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/admin/updateproducer.jsp=UTF-8
 >>>>>>> d5c48324abbe75b1e5f80ec20ca9fca3e07f51d1
+>>>>>>> 3fb17b47a97451a4a99639172a5df43cdc557687
 encoding//src/main/webapp/WEB-INF/views/web/Product-detail.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/ShowProduct.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/TrangChu.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/forgotPassword.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/orderConfirm.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/web/register.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/web/viewCart.jsp=UTF-8
 encoding//src/main/webapp/decorators/admin.jsp=UTF-8
 encoding//src/main/webapp/decorators/web.jsp=UTF-8

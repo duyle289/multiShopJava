@@ -23,8 +23,8 @@
 		location="/resources/" />
 	<mvc:resources mapping="/template/**"
 		location="/template/" />
-			<mvc:default-servlet-handler />
-			<bean id="multipartResolver"
+	<mvc:default-servlet-handler />
+	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<property name="maxUploadSize" value="100000000000" />
 	</bean>
@@ -85,7 +85,7 @@
 			<ref bean="sessionFactory" />
 		</constructor-arg>
 	</bean>
-	
+
 	<bean id="loaisanphamDAO"
 		class="multiShopJava.SpringMVC.dao.loaisanphamDAO.loaisanphamDAOImpl">
 		<constructor-arg>
@@ -122,9 +122,36 @@
 			<ref bean="sessionFactory" />
 		</constructor-arg>
 	</bean>
+	<bean id="hoadonDAO"
+		class="multiShopJava.SpringMVC.dao.hoadonDAO.hoadonDAOImpl">
+		<constructor-arg>
+			<ref bean="sessionFactory" />
+		</constructor-arg>
+	</bean>
+	<bean id="chitiethdDAO"
+		class="multiShopJava.SpringMVC.dao.chitiethdDAO.chitiethdDAOImpl">
+		<constructor-arg>
+			<ref bean="sessionFactory" />
+		</constructor-arg>
+	</bean>
+	<!-- Using SMTP -->
+ 	<bean id="mailSender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="username" value="multishoplaptop@gmail.com" />
+		<property name="password" value="xzqxehjxfwimtnqa" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.port">587</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean> 
 	<mvc:interceptors>
 		<mvc:interceptor>
 			<mvc:mapping path="/order/**" />
+			<mvc:mapping path="/cart/**" />
 			<mvc:mapping path="/admin/**" />
 			<mvc:exclude-mapping path="/login" />
 			<bean

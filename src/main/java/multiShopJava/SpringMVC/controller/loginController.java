@@ -28,7 +28,6 @@ public class loginController {
 	@RequestMapping(value = { "" }, method = RequestMethod.GET)
 	public ModelAndView login(HttpServletRequest request) {
 		referer = request.getHeader("Referer");
-		// System.out.println(request.getRequestURI());
 		ModelAndView model = new ModelAndView("Login");
 		return model;
 	}
@@ -52,7 +51,12 @@ public class loginController {
 			} else {
 				// Đăng nhập thành công, lưu thông tin khách hàng vào session
 				session.setAttribute("khachhang", kh);
-				return "redirect:" + referer;
+				if(referer.contains("register")||referer.contains("forgotPassword")) {
+					return "redirect:/";
+				}else {
+					return "redirect:" + referer;
+				}
+				
 			}
 		} else if (role.equals("admin")) {
 			nhanvien nv = nhanvienDAO.findByUsername(tk);
