@@ -137,9 +137,9 @@
 	<!-- Using SMTP -->
  	<bean id="mailSender"
 		class="org.springframework.mail.javamail.JavaMailSenderImpl">
-		<property name="host" value="smtp.gmail.com" />
+		<property name="host" value="" />
 		<property name="username" value="multishoplaptop@gmail.com" />
-		<property name="password" value="xzqxehjxfwimtnqa" />
+		<property name="password" value="" />
 		<property name="javaMailProperties">
 			<props>
 				<prop key="mail.smtp.auth">true</prop>
